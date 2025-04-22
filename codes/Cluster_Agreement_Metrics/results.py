@@ -4,11 +4,10 @@ from nmi_score import compute_nmi_scores
 from ari_score import compute_ari_scores
 
 # Load your Excel file
-df = pd.read_excel(r"C:\Users\Mohamed Khalil\Desktop\Reviews_Clustering\Reviews_Research_LLM\Data\output_phase1.xlsx")  # Replace with actual path
-
+df = pd.read_excel(r"C:\Users\Mohamed Khalil\Desktop\Reviews_Clustering\Reviews_Research_LLM\Data\current.xlsx")  # Replace with actual path
 
 gpt_col_name = 'Clusters'  # or whatever your column name is
-human_col_name = 'Human_Clustering_2'
+human_col_name = 'dict'
 
 
 f1_scores, avg_f1, skipped = compute_f1_scores(df, gpt_col=gpt_col_name, human_col=human_col_name)
